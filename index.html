@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="cmn-hans">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>个人网页</title>
+    <style>
+        body {
+            /* background-color: rgb(205, 237, 222); */
+            background-color: rgb(175, 186, 127);
+        }
+        
+        .title {
+            width: 450px;
+            font-style: oblique;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            margin-left: 167px;
+            margin-top: 60px;
+            margin-bottom: -36px;
+            color: #FFFACD;
+            text-shadow: 4px 4px 8px cadetblue;
+            font-size: 5vw;
+        }
+        
+        .menu {
+            width: 100%;
+            height: 40px;
+            background-color: rgb(171, 180, 152);
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 999;
+            box-shadow: 0 0 20px rgb(156, 160, 49);
+        }
+        
+        .menu ul {
+            list-style: none;
+            padding-left: 34px;
+            margin-top: 10px;
+            float: left;
+            text-shadow: cadetblue;
+        }
+        
+        .menu li {
+            float: left;
+            position: relative;
+        }
+        
+        .menu a {
+            display: block;
+            color: rgb(135, 134, 55);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            text-shadow: 4px 4px 8px #FFFACD;
+            font-weight: bold;
+            text-align: center;
+            text-decoration: none;
+            line-height: 17px;
+            padding: 0 20px;
+        }
+        
+        .personal {
+            background-image: url("背景2.png");
+            background-size: cover;
+            background-repeat: no-repeat;
+            margin-left: 35px;
+            box-shadow: 0 0 15px cadetblue;
+            margin-top: 57px;
+            height: 961px;
+            width: 1439px;
+        }
+        
+        .personal h2 {
+            width: 400px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            float: right;
+            font-size: 4.5vw;
+            text-shadow: 4px 4px 8px rgb(98, 90, 5);
+            margin-top: -10px;
+            margin-right: 24px;
+            color: rgb(135, 162, 86);
+        }
+        
+        .welcome {
+            font-size: 6vw;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            color: darkslategray;
+            text-shadow: 4px 4px 8px rgb(98, 90, 5);
+            padding-top: 655px;
+            margin-left: 235px;
+        }
+        
+        .personal ul {
+            float: left;
+            margin-top: 50px;
+            margin-left: 240px;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            color: darkslategray;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px #FFFACD;
+            font-size: 1.5vw;
+        }
+        
+        .name {
+            margin-top: 35px;
+            margin-left: 500px;
+            float: left;
+        }
+        
+        .hobbies {
+            background-size: cover;
+            background-repeat: no-repeat;
+            margin-left: 35px;
+            box-shadow: 0 0 15px cadetblue;
+            height: 765px;
+            width: 1436px;
+            margin-top: 120px;
+            background-image: url("云2.png");
+        }
+        
+        .hobbies h2 {
+            width: 20px;
+            height: 10px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            float: left;
+            font-size: 4vw;
+            text-shadow: 4px 4px 8px black;
+            margin-top: 311px;
+            margin-left: 42px;
+            color: rgb(111, 25, 111);
+        }
+        
+        .hobbies ul {
+            padding-left: 25px;
+            padding-top: 84px;
+            font-size: 1.5vw;
+            font-family: 'Times New Roman', Times, serif;
+            font-weight: bold;
+            text-shadow: 4px 4px 8px mediumslateblue
+        }
+        
+        .view {
+            padding-left: 1027px;
+            padding-top: 52px;
+            font-size: 1.5vw;
+            font-family: 'Times New Roman', Times, serif;
+            font-weight: bold;
+            text-shadow: 4px 4px 8px mediumslateblue
+        }
+        
+        .music {
+            padding-left: 256px;
+            margin-top: -136px;
+            font-size: 1.5vw;
+            font-family: 'Times New Roman', Times, serif;
+            font-weight: bold;
+            text-shadow: 4px 4px 8px mediumslateblue
+        }
+        
+        .photos {
+            background-image: url("油画蓝天绿地.png");
+            background-size: cover;
+            background-repeat: no-repeat;
+            margin-left: 35px;
+            box-shadow: 0 0 15px cadetblue;
+            margin-top: 120px;
+            height: 961px;
+            width: 1439px;
+        }
+        
+        .photos h2 {
+            width: 20px;
+            height: 10px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            float: left;
+            font-size: 4vw;
+            text-shadow: 4px 4px 8px mediumslateblue;
+            margin-top: -46px;
+            margin-left: 20px;
+            color: rgb(0, 28, 84);
+        }
+        
+        .photos img {
+            width: 400px;
+            height: 300px;
+            margin-left: 2px;
+            margin-bottom: -182px;
+            cursor: pointer;
+            margin-top: 240px;
+        }
+        
+        .overlay {
+            display: none;
+            position: fixed;
+            top: 160px;
+            ;
+            left: 300px;
+            right: 300px;
+            bottom: 10px;
+            background: #000;
+            z-index: 9999;
+        }
+        
+        .overlay img {
+            max-width: 90%;
+            max-height: 90%;
+            margin: auto;
+            position: absolute;
+            top: 20px;
+            left: 30px;
+            right: 40px;
+            bottom: 10px;
+        }
+        
+        .close {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 30px;
+            color: white;
+            cursor: pointer;
+        }
+        
+        .menu1 {
+            width: 850px;
+            height: 40px;
+            align-content: center;
+            background-color: rgba(98, 90, 5);
+            margin-top: 277px;
+            margin-left: 327px;
+        }
+        
+        .menu1 ul {
+            list-style: none;
+            margin: 12px;
+            padding: 0;
+            float: left;
+        }
+        
+        .menu1 li {
+            float: left;
+            position: relative;
+        }
+        
+        .menu1 a {
+            display: block;
+            color: #fff;
+            text-align: center;
+            text-decoration: none;
+            line-height: 17px;
+            padding: 0 20px;
+            font-weight: bold;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 1.5vw;
+            text-shadow: 2px 2px 4px rgb(235, 229, 209);
+        }
+        
+        .menu1 ul ul {
+            display: none;
+            position: absolute;
+            top: 60px;
+            left: 0;
+            width: 180px;
+            background-color: rgb(181, 183, 135);
+        }
+        
+        .menu1 ul li:hover>ul {
+            display: inherit;
+        }
+        
+        .menu1 ul ul li {
+            width: 100%;
+            float: none;
+            position: relative;
+        }
+        
+        .menu1 ul ul ul li {
+            position: relative;
+            top: -60px;
+            left: 180px;
+        }
+        
+        .about1 h2 {
+            width: 400px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            float: left;
+            font-size: 5vw;
+            text-shadow: 4px 4px 8px rgb(98, 90, 5);
+            margin-top: -158px;
+            margin-left: 95px;
+            color: rgb(181, 134, 84);
+        }
+        /* 个人信息样式 */
+        
+        .info {
+            max-width: 810px;
+            margin: 0px auto 50px;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 2px 2px 8px rgba(98, 90, 5);
+        }
+        
+        h1 {
+            background-color: rgba(98, 90, 5);
+            text-align: center;
+            font-size: 36px;
+            color: #fff;
+            margin-bottom: 20px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            text-shadow: 2px 2px 4px rgb(98, 90, 5);
+        }
+        
+        .profile-image {
+            display: block;
+            margin-top: -14px;
+            width: 110px;
+            border-radius: 15px;
+            margin-left: 335px;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 30px;
+        }
+        
+        th,
+        td {
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        th {
+            background-color: #f2f2f2;
+            font-weight: normal;
+        }
+        /* 教育经历样式 */
+        
+        .education {
+            max-width: 800px;
+            margin: 130px auto 50px;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(98, 90, 5);
+        }
+        
+        .education h3 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        
+        ul {
+            list-style: disc;
+            margin-left: 20px;
+            margin-bottom: 20px;
+        }
+        /* 技能样式 */
+        
+        .skill {
+            max-width: 800px;
+            margin: 130px auto 80px;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(98, 90, 5);
+        }
+        
+        .skill h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        
+        .skill ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        
+        .skill li {
+            width: 180px;
+            background-color: #f2f2f2;
+            margin-bottom: 10px;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h4 class="title" title="个人网页">My Station</h4>
+    <img src="房子2.png" style="margin-top:-60px;margin-left:75px;width: 80px;height: 88px;">
+    <div class="menu">
+        <nav>
+            <ul>
+                <li> <a href="#personal">主页</a></li>
+                <li><a href="#about1">个人简历</a></li>
+                <li><a href="#hobbies">我的爱好</a></li>
+                <li><a href="#photos">图片集</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div id="personal" class="personal">
+        <h2>Home page</h2>
+        <ul>
+            <p>在接受他人之前，首先要接受自己。</p>
+            <p>接受人生的低谷，不怨天尤人，扛得住风波，经得起沉浮，唯有坦然面对，才能走出黑暗。</p>
+            <p>接受短暂的痛苦，不再逃避，与其在往事中沉沦，不如及时止损，给自己一个崭新开始。</p>
+            <p>接受自己的平凡，不羡慕别人的生活，与不完美和解，以一颗平常心，过好自己的小日子。</p>
+            <p>唯有接纳一切好的坏的，才能解脱自己的心，真正掌控人生。</p>
+            <p class="name"> ——————《杀死一只知更鸟》</p>
+        </ul>
+        <p class="welcome">Welcome to my Station!</p>
+    </div>
+
+    <div id="hobbies" class="hobbies">
+        <h2>My hobbies</h2>
+        <ul>
+            <p>我有很多的爱好，</p>
+            <p>我爱旅游，</p>
+            <p>爱看电影……</p>
+        </ul>
+        <img src="zhiwuyuan.jpg" style="width: 180px;height: 200px;margin-top:-160px;margin-left: 304px;box-shadow: 2px 2px 4px mediumslateblue">
+        <img src="geren.jpg" style="width: 200px;height: 200px;margin-top:-160px;margin-left: 20px;box-shadow: 2px 2px 4px mediumslateblue">
+
+        <div class="view">
+            <p>还爱静静坐着看美丽的风景,</p>
+            <p>再将风景拍摄下来，将美定格.</p>
+            <img src="hua.jpg" style="width: 200px;height: 200px;margin-top:-132px;margin-left: -217px;box-shadow: 2px 2px 4px mediumslateblue">
+            <img src="pt2022_09_01_01_06_31.jpg" style="width: 200px;height: 200px;margin-top:-132px;margin-left: -434px;box-shadow: 2px 2px 4px mediumslateblue">
+        </div>
+
+        <img src="留声机2.png" style="width: 269px;height: 182px;padding-left: 0px;margin-top:-9px;">
+        <img src="25hours.png" style="width:170px;height: 170px;padding-left: 472px;padding-top: 25px">
+        <img src="let it go.png" style="width:170px;height: 170px;padding-left: 40px;padding-top: 25px;">
+        <div class="music">
+            <p>在很多时刻，音乐也常伴我左右,</p>
+            <p>生命中怎能缺少音乐呢！</p>
+        </div>
+    </div>
+
+    <div id="photos" class="photos">
+        <h2>My collection of pictures</h2>
+        <img src="lvshu.png" onclick="showImage(this.src)">
+        <img src="吉他少年.png" onclick="showImage(this.src)">
+        <img src="银杏.png" onclick="showImage(this.src)">
+        <img src="油画城堡.png" onclick="showImage(this.src)">
+
+        <div class="overlay" onclick="hideImage()">
+            <img id="overlayImage">
+            <div class="close" onclick="hideImage()">&times;</div>
+        </div>
+
+        <script>
+            function showImage(src) {
+                document.getElementById("overlayImage").src = src;
+                document.querySelector(".overlay").style.display = "flex";
+            }
+
+            function hideImage() {
+                document.querySelector(".overlay").style.display = "none";
+            }
+        </script>
+
+    </div>
+
+    </div>
+
+    <div id="about1" class="about1">
+        <h2>My resume</h2>
+
+        <div class="menu1">
+            <ul>
+                <li><a href="#info">个人信息</a></li>
+                <li><a href="#edu">教育经历</a></li>
+                <li><a href="#skill">技能</a></li>
+            </ul>
+        </div>
+
+        <div id="info" class="info">
+            <h1>个人信息</h1>
+            <img class="profile-image" src="个人图片.png" alt="个人照片">
+            <table>
+                <!-- <tr>
+                    <img src="个人图片.png" style="margin-left: 302px;padding-top: 0px;padding-bottom: 0px;box-shadow:0px 0px 10px #333;width: 179px;height: 193px;">
+                </tr> -->
+                <tr>
+                    <th>姓名</th>
+                    <td>刘永希</td>
+                </tr>
+                <tr>
+                    <th>性别</th>
+                    <td>女</td>
+                </tr>
+                <tr>
+                    <th>生日</th>
+                    <td>2003年1月21日</td>
+                </tr>
+                <tr>
+                    <th>学历</th>
+                    <td>本科</td>
+                </tr>
+                <tr>
+                    <th>毕业院校</th>
+                    <td>福建理工大学</td>
+                </tr>
+            </table>
+        </div>
+
+        <div id="edu" class="education">
+            <h1>教育经历</h1>
+            <div id="highschool">
+                <h3>高中</h3>
+                <ul>
+                    <li>德兴铜矿中学</li>
+                    <li>2018年9月-2021年6月</li>
+                </ul>
+            </div>
+            <div id="university">
+                <h3>大学</h3>
+                <ul>
+                    <li><a href="https://www.fjut.edu.cn/main.htm">福建理工大学</a></li>
+                    <li>2021年9月-2025年6月</li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="skill" class="skill">
+            <h1>技能</h1>
+            <ul>
+                <li>CSS</li>
+                <li>HTML</li>
+                <li>Javascript</li>
+                <li>Photoshop</li>
+            </ul>
+        </div>
+    </div>
+</body>
+
+</html>
